@@ -62,7 +62,7 @@ cd expense-tracker
    python manage.py runserver
    ```
 
-The backend will now be running at \`http://localhost:8000\`.
+The backend will now be running at \`http://localhost:8000`.
 
 ### Frontend Setup (Next.js)
 
@@ -84,21 +84,21 @@ The backend will now be running at \`http://localhost:8000\`.
    npm run dev
    ```
 
-The frontend will now be running at \`http://localhost:3000\`.
+The frontend will now be running at \`http://localhost:3000`.
 
 ## Running the Application
 
 After following the steps above:
 
-- Backend: Go to \`http://localhost:8000\` to access the Django backend.
-- Frontend: Go to \`http://localhost:3000\` to view the Next.js frontend.
+- Backend: Go to \`http://localhost:8000` to access the Django backend.
+- Frontend: Go to \`http://localhost:3000` to view the Next.js frontend.
 
 The frontend will communicate with the backend to manage expense tracking.
 
 ---
 
 ### Notes:
-- Make sure the backend is running on \`http://localhost:8000\` before starting the frontend.
+- Make sure the backend is running on \`http://localhost:8000` before starting the frontend.
 - If you encounter issues with dependencies, check that you're using the correct versions as listed in \`requirements.txt\` and \`package.json\`.
 
 ---
