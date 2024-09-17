@@ -1,83 +1,105 @@
-# Expense Tracker Application
 
-This is a full-stack expense tracker application with a **Next.js frontend** and a **Django backend** using **SQLite** for the database. Both services are containerized using Docker for easy setup and deployment.
+# Expense Tracker
 
-## Features
-- **Next.js** for the frontend
-- **Django REST Framework** for the backend API
-- **SQLite** for database management
-- **JWT Authentication** with Django REST Framework
-- **CORS support** for cross-origin requests
+This is a full-stack expense tracker application with a Django backend and a Next.js frontend. Follow the steps below to set up and run the project locally.
 
-## Prerequisites
-Ensure you have the following installed on your system:
-- [Docker](https://docs.docker.com/get-docker/)
-- [Docker Compose](https://docs.docker.com/compose/install/)
+## Table of Contents
+1. [Requirements](#requirements)
+2. [Installation](#installation)
+3. [Backend Setup](#backend-setup)
+4. [Frontend Setup](#frontend-setup)
+5. [Running the Application](#running-the-application)
 
-## Setup Instructions
+## Requirements
 
-### 1. Clone the Repository
+Make sure you have the following installed on your machine:
 
-```bash
-git clone https://github.com/yourusername/expense-tracker.git
+- Python 3.x
+- Node.js and npm
+- pip (Python package installer)
+- Virtualenv (optional, but recommended)
+
+## Installation
+
+Clone the repository to your local machine:
+
+\`\`\`bash
+git clone https://github.com/your-username/expense-tracker.git
 cd expense-tracker
-```
+\`\`\`
 
-### 2. Set Up Environment Variables
+### Backend Setup (Django)
 
-Create a `.env` file in the root directory (same level as `docker-compose.yml`) to hold environment variables for Django:
+1. Navigate to the \`expense_tracker_backend\` directory:
 
-```bash
-# .env
-SECRET_KEY=your-secret-key   # Replace with a strong secret key
-DEBUG=True                   # Use True for development, False for production
-ALLOWED_HOSTS=localhost,django_backend
-```
+   \`\`\`bash
+   cd expense_tracker_backend
+   \`\`\`
 
-Make sure to replace `your-secret-key` with a unique, secure value.
+2. (Optional) Create and activate a virtual environment:
 
-### 3. Build and Run the Docker Containers
+   \`\`\`bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows, use venv\Scripts\activate
+   \`\`\`
 
-Run the following commands to build the Docker images and start the services:
+3. Install the required dependencies:
 
-```bash
-docker-compose build
-docker-compose up
-```
+   \`\`\`bash
+   pip install -r requirements.txt
+   \`\`\`
 
-This will:
-- Build and start the **Django backend** on [http://localhost:8000](http://localhost:8000).
-- Build and start the **Next.js frontend** on [http://localhost:3000](http://localhost:3000).
+4. Run migrations to set up the database:
 
-### 4. Access the Application
+   \`\`\`bash
+   python manage.py makemigrations
+   python manage.py migrate
+   \`\`\`
 
-- **Frontend (Next.js)**: Navigate to [http://localhost:3000](http://localhost:3000).
-- **Backend API (Django)**: Navigate to [http://localhost:8000](http://localhost:8000).
+5. Run the backend server:
 
-### 5. Stopping the Application
+   \`\`\`bash
+   python manage.py runserver
+   \`\`\`
 
-To stop the running containers, use:
+The backend will now be running at \`http://localhost:8000\`.
 
-```bash
-docker-compose down
-```
+### Frontend Setup (Next.js)
 
-### Additional Information
+1. Open a new terminal and navigate to the \`expense-tracker-frontend\` directory:
 
-- **SQLite** is used as the database, and the database file is saved inside the container. You can access the `db.sqlite3` file if needed by connecting to the running backend container.
-- **JWT Authentication** is set up for the API. If you want to test API routes that require authentication, you'll need to obtain a JWT token by logging in or registering through the backend API.
+   \`\`\`bash
+   cd expense-tracker-frontend
+   \`\`\`
 
-### Troubleshooting
+2. Install the required dependencies:
 
-1. **Backend Error: `You must set settings.ALLOWED_HOSTS if DEBUG is False`.**
-   - Ensure that `ALLOWED_HOSTS` is set correctly in your `.env` file. If running in development mode, set `DEBUG=True`.
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-2. **Port Already in Use:**
-   - If you encounter issues with ports being occupied, stop any running services that are using port `3000` (for Next.js) or `8000` (for Django) and try again.
+3. Run the frontend development server:
 
-3. **Rebuilding Containers:**
-   - If you make changes to the code and need to rebuild the containers, use the following command:
+   \`\`\`bash
+   npm run dev
+   \`\`\`
 
-   ```bash
-   docker-compose build
-   ```
+The frontend will now be running at \`http://localhost:3000\`.
+
+## Running the Application
+
+After following the steps above:
+
+- Backend: Go to \`http://localhost:8000\` to access the Django backend.
+- Frontend: Go to \`http://localhost:3000\` to view the Next.js frontend.
+
+The frontend will communicate with the backend to manage expense tracking.
+
+---
+
+### Notes:
+- Make sure the backend is running on \`http://localhost:8000\` before starting the frontend.
+- If you encounter issues with dependencies, check that you're using the correct versions as listed in \`requirements.txt\` and \`package.json\`.
+
+---
+
