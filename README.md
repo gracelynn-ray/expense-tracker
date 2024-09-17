@@ -17,7 +17,6 @@ Make sure you have the following installed on your machine:
 - Python 3.x
 - Node.js and npm
 - pip (Python package installer)
-- Virtualenv (optional, but recommended)
 
 ## Installation
 
