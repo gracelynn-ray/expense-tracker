@@ -23,44 +23,44 @@ Make sure you have the following installed on your machine:
 
 Clone the repository to your local machine:
 
-\`\`\`bash
+```
 git clone https://github.com/your-username/expense-tracker.git
 cd expense-tracker
-\`\`\`
+```
 
 ### Backend Setup (Django)
 
 1. Navigate to the \`expense_tracker_backend\` directory:
 
-   \`\`\`bash
+   ```
    cd expense_tracker_backend
-   \`\`\`
+   ```
 
 2. (Optional) Create and activate a virtual environment:
 
-   \`\`\`bash
+   ```
    python3 -m venv venv
    source venv/bin/activate  # On Windows, use venv\Scripts\activate
-   \`\`\`
+   ```
 
 3. Install the required dependencies:
 
-   \`\`\`bash
+   ```
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
 4. Run migrations to set up the database:
 
-   \`\`\`bash
+   ```
    python manage.py makemigrations
    python manage.py migrate
-   \`\`\`
+   ```
 
 5. Run the backend server:
 
-   \`\`\`bash
+   ```
    python manage.py runserver
-   \`\`\`
+   ```
 
 The backend will now be running at \`http://localhost:8000\`.
 
@@ -68,21 +68,21 @@ The backend will now be running at \`http://localhost:8000\`.
 
 1. Open a new terminal and navigate to the \`expense-tracker-frontend\` directory:
 
-   \`\`\`bash
+   ```
    cd expense-tracker-frontend
-   \`\`\`
+   ```
 
 2. Install the required dependencies:
 
-   \`\`\`bash
+   ```
    npm install
-   \`\`\`
+   ```
 
 3. Run the frontend development server:
 
-   \`\`\`bash
+   ```
    npm run dev
-   \`\`\`
+   ```
 
 The frontend will now be running at \`http://localhost:3000\`.
 
