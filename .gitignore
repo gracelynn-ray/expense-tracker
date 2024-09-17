@@ -1,0 +1,27 @@
+# Python (Django)
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+env/
+venv/
+*.env        # Ignore environment files (sensitive data)
+
+# Django specific
+/static/
+media/
+
+# Node.js (Next.js)
+node_modules/
+npm-debug.log
+yarn-error.log
+.next/
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store

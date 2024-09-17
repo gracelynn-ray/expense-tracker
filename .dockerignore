@@ -1,0 +1,10 @@
+# Node modules and other generated files
+expense-tracker-frontend/node_modules
+expense_tracker_backend/expense_tracker_backend/__pycache__
+expense_tracker_backend/db.sqlite3  # SQLite database file
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.db
+*.sqlite3
